@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=employee
+comment1.params=empid\ ename\ basic
+comment1.target=float\ earnings(int,\ java.lang.String,\ int)
+numComments=2
