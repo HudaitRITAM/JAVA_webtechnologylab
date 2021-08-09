@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=lab10_5
+comment1.params=
+comment1.target=java.lang.String\ getMessage()
+comment2.params=hours\ mins\ secs
+comment2.target=void\ Time(int,\ int,\ int)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
