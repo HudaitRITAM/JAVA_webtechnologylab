@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=lab8_1
+comment1.params=roll\ reg
+comment1.target=student(int,\ int)
+comment2.params=
+comment2.target=void\ course()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4
