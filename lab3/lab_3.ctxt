@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=lab_3
+comment1.params=basic
+comment1.target=void\ earn(double)
+comment2.params=basic
+comment2.target=void\ deduc(double)
+comment3.params=basic
+comment3.target=void\ Bon(double)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
