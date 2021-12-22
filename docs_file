@@ -1,0 +1,322 @@
+LAB-4
+
+Q1)
+
+package kiit;
+import java.util.*;
+class Herons 
+{
+	public static void main(String args[])
+	{
+		Scanner sc=new Scanner(System.in);
+		double area,a,b,c, s;
+		System.out.println("enter the sides of triangle");
+		a=sc.nextInt();
+		b=sc.nextInt();
+		c=sc.nextInt();
+		s=(a+b+c)/2;
+		area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+		System.out.println(area);
+	}
+}
+
+Q2)
+package kiit;
+import java.util.*;
+public class rectangle 
+{
+public static void main(String[] args) 
+{
+	Scanner sc= new Scanner(System.in);
+	double area;
+	int l,b;
+	System.out.println("enter the length and breadth");
+	l=sc.nextInt();
+	b=sc.nextInt();
+	area=l*b;
+	System.out.println("Area="+area);
+}
+
+}
+
+Q3)
+package kiit;
+import java.util.*;
+public class Swap 
+{
+		public static void main(String[] args)
+		{
+			Scanner sc ; 
+			sc = new Scanner(System.in);
+			int a,b;
+			System.out.println("enter two values");
+			a=sc.nextInt(); 
+			b=sc.nextInt();
+			System.out.println("Before swapping");
+			System.out.println("value of  a="+a);
+			System.out.println("value of  b="+b);
+			a=a+b;
+			b=a-b;
+		    a=a-b;
+			System.out.println("After swapping");
+			System.out.println("value of  a="+a);
+			System.out.println("value of  b="+b);		    
+		}
+	}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+LAB-5
+
+Q4)
+package kiit;
+public class COUNT 
+{
+    static int c=0;
+    COUNT()
+    {
+    	c++;
+    }
+	public static void main(String[] args) 
+	{
+  		COUNT obj1=new COUNT();
+  		COUNT obj2=new COUNT();
+  		COUNT obj3=new COUNT();
+  		COUNT obj4=new COUNT();
+      System.out.println("number of objects "+c);
+}
+}
+
+
+Q5)
+package kiit;
+import java.util.*;
+class Array4
+{
+    public static void main(String args[])
+    {
+        System.out.println("Enter array size");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        boolean a[] = new boolean[n];
+        System.out.println("Enter array elements");
+        for(int i=0 ; i<n ; i++)
+        {
+            arr[i]=sc.nextInt();
+            a[arr[i]]=false;
+        }
+        System.out.println("\nFrequencies of the Elements \n");
+        for(int i=0 ; i<n ; i++)
+        {
+            int count=1;
+            for(int j=i+1 ; j<n ; j++)
+            {
+                if(arr[i]==arr[j] && a[arr[i]]==false)
+                count++;
+            }
+            if(a[arr[i]]==false)
+            {
+                System.out.println(arr[i] + " is present in array " +count+ "  times");
+                a[arr[i]]=true;
+            }
+        }
+    }
+}
+
+Q6)
+package kiit;
+import java.util.*;
+public class LAB5_Q4
+{
+	public static void main(String[] args) 
+	{	
+		Scanner sc= new Scanner(System.in);
+		int a[][]=new int[5][5];
+		int i,j,sum1=0,sum2=0,m;
+		System.out.println("enter the value");
+		m=sc.nextInt();
+		System.out.println("Enter array elements");
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<m;j++)
+			{
+				a[i][j]=sc.nextInt();
+			}
+		}
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<m;j++)
+			{
+				if(i==j)
+				{
+					sum1=sum1+a[i][j];
+				}
+				if((i+j)==m-1)
+				{
+					sum2=sum2+a[i][j];
+				}
+			}
+		}
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<m;j++)
+			{
+				System.out.print(+a[i][j]+" ");
+			}
+           System.out.println();
+		}	
+		System.out.println("right diagonal ="+sum1+" left diagonal="+sum2);
+	}
+}
+-----------------------------------------------------------------------------------------------------------------------
+
+LAB-6
+
+Q1)
+package JAVA;
+import java.util.*;
+public class BOX1 
+{
+    int l,w,h;
+	void volume()
+	{
+		System.out.println("volume="+(l*h*w));
+	}
+}
+class Demo
+{
+	public static void main(String[] args) 
+	{
+		BOX1 b=new BOX1();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the length");
+		b.l=sc.nextInt();
+		System.out.println("enter the width");
+		b.w=sc.nextInt();
+		System.out.println("enter the height");
+		b.h=sc.nextInt();
+		b.volume();
+	}
+}
+
+
+Q2)
+package LAB6;
+public class Subtract
+{
+    void sub(int a,int b)
+    {
+        System.out.println(+(a-b));
+    } 
+    void sub(int a,int b,int c)
+    {
+        System.out.println(+(a-b-c));
+    }
+    public static void main(String[] args)
+    {
+     Subtract s=new Subtract();
+     s.sub(10,5);
+     s.sub(18, 8,3);
+    }
+}
+
+Q4)
+package LAB6;
+import java.util.*;
+public class RECTANGLE
+{
+	int l,b;
+	double per,area;
+	void read()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter length and breadth");
+		l=sc.nextInt();
+		b=sc.nextInt();
+	}
+	void calculate()
+	{
+		per=2*(l+b);
+		area=l*b;	
+	}
+   void display()
+   {
+	   System.out.println("PERIMETER="+per+" AREA ="+area);
+   }
+   public static void main(String[] args)
+   {
+	   RECTANGLE r=new RECTANGLE();
+	   r.read();
+	   r.calculate();
+	   r.display();
+   }
+}
+
+Q5)
+package JAVA;
+import java.util.*;
+class mainmethod
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,rno,i,k=0;
+        String nam;
+        float cg,min;
+        student[] s=new student[10];
+        System.out.println("enter the no. of student");
+        n=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+
+            System.out.println("enter the name");
+            nam=sc.next();
+            System.out.println("enter the roll");
+            rno=sc.nextInt();
+            System.out.println("enter the cgpa");
+            cg=sc.nextFloat();
+            s[i]=new student(nam,rno,cg);
+        }
+        for(i=0;i<n;i++)
+        {
+            s[i].display();
+        }
+        min=s[0].cgpa;
+        for(i=0;i<n;i++)
+        {
+            if(min>s[i].cgpa)
+            {
+                min=s[i].cgpa;
+                k=i;
+            }
+        }
+        System.out.println("THE STUDENT HAVING MIN CGPA IS "+s[k].name+" HAVING "+s[k].cgpa+" CGPA");
+    }
+}
+public class student
+{
+    Scanner sc=new Scanner(System.in);
+    int roll;
+    String name;
+    float cgpa;
+    student(String n,int r,float f)
+    {
+        name=n;
+        roll=r;
+        cgpa=f;
+    }
+    void display()
+    {
+        System.out.println();
+        System.out.println("NAME= "+name);
+        System.out.println("ROLL= "+roll);
+        System.out.println("CGPA= "+cgpa);
+    }
+}    
+
+--------------------------------------------------------------------------------------------------------------------
+
+LAB-7
+
+
